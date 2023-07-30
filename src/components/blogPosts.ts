@@ -30,7 +30,10 @@ const blogPosts: ProjectType[] = [
 
 export function BlogPosts(): string {
   return html`
-    <div id="blogposts" class="w-6/12 m-auto grid grid-cols-1 gap-2">
+    <div
+      id="blogposts"
+      class="p-2 md:p-6 lg:p-0 lg:w-6/12 m-auto grid grid-cols-1 gap-2 project-container"
+    >
       ${blogPosts.reduce((acc, post) => acc + Project(post), "")}
     </div>
   `;

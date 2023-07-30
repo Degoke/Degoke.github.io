@@ -12,7 +12,7 @@ export function Project(project: ProjectType): string {
   return html`
     <div
       data-type=${project.type}
-      class="drop-shadow-lg px-6 py-4 bg-slate-800 space-y-8 hover:scale-105"
+      class="drop-shadow-lg px-6 py-4 bg-light space-y-8 hover:drop-shadow-2xl project-card transition-all duration-500"
     >
       ${project.type === "blogpost"
         ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -32,9 +32,9 @@ export function Project(project: ProjectType): string {
         : ""}
 
       <div class="">
-        <h2 class="text-2xl font-semibold">${project.title}</h2>
-        <p class="text-slate-300 text-lg mt-2">${project.details}</p>
-        <p class="font-semibold text-slate-300 text-sm mt-8">
+        <h2 class="text-xl font-semibold">${project.title}</h2>
+        <p class="text-opacity-10 text-lg mt-2">${project.details}</p>
+        <p class="font-semibold text-opacity-10 text-sm mt-8">
           ${project.tags.reduce((acc, tag) => acc + tag + ".", "#")}
         </p>
       </div>

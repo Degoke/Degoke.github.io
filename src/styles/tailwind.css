@@ -4,12 +4,13 @@
 
 @layer base {
     body {
-        @apply bg-slate-950 text-slate-50
+        @apply bg-dark text-white font-mono
     }
 
     a:hover {
         cursor: pointer;
         transform: scale(1.1);
+        @apply transition-all duration-500
     }
 }
 
@@ -21,4 +22,17 @@
 .main-content {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+@media all and (min-width: 768px) {
+    .project-container:hover .project-card{
+        opacity: .5;
+        filter: blur(10px);
+    }
+    
+    .project-container .project-card:hover{
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1.1);
+    }
 }
