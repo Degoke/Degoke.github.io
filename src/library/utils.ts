@@ -17,20 +17,19 @@ export function setHash(value: string) {
 }
 
 export function splitArrayByIndex<T>(arr: T[]) {
-    const evenIndexesArray: T[] = [];
-    const oddIndexesArray: T[] = [];
-  
-    arr.forEach((element, index) => {
-      if (index % 2 === 0) {
-        evenIndexesArray.push(element);
-      } else {
-        oddIndexesArray.push(element);
-      }
-    });
-  
-    return {
-      evenIndexes: evenIndexesArray,
-      oddIndexes: oddIndexesArray,
-    };
-  }
-  
+  const evenIndexesArray: T[] = [];
+  const oddIndexesArray: T[] = [];
+
+  arr.forEach((element, index) => {
+    if (index % 2 === 0) {
+      evenIndexesArray.push(element);
+    } else {
+      oddIndexesArray.push(element);
+    }
+  });
+
+  return {
+    evenIndexes: evenIndexesArray,
+    oddIndexes: oddIndexesArray,
+  };
+}

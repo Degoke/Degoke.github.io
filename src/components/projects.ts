@@ -51,8 +51,7 @@ const projects: ProjectType[] = [
   },
   {
     title: "My Portfolio Site",
-    details:
-      `Minimalist dark mode portfolio website to show my works
+    details: `Minimalist dark mode portfolio website to show my works
       <br><br>
       Built with Vanilla Typescript, Tailwind Css and Vite`,
     link: "https://github.com/Degoke/portfolio",
@@ -70,11 +69,11 @@ const projects: ProjectType[] = [
 ];
 
 export function Projects(): string {
-    const { evenIndexes, oddIndexes } = splitArrayByIndex<ProjectType>(projects)
+  const { evenIndexes, oddIndexes } = splitArrayByIndex<ProjectType>(projects);
   return html`
     <div
       id="projects"
-      class="lg:w-6/12 p-2 md:p-6 lg:p-0 m-auto grid grid-cols-1 lg:grid-cols-2 gap-2 project-container"
+      class="lg:w-8/12 p-2 md:p-6 lg:p-0 m-auto grid grid-cols-1 lg:grid-cols-2 gap-2 project-container"
     >
       <div class="grid grid-cols-1 gap-2 content-start">
         ${evenIndexes.reduce((acc, project) => acc + Project(project), "")}
