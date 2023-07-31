@@ -79,7 +79,7 @@
       <section class="lg:w-8/12 m-auto py-4 lg:py-8 lg:mt-16">
         <div class="space-y-12">
           <div class="space-y-2">
-          <img src="/avatar.svg" class="rounded-full w-16 h-16" />
+          <img src="/avatar.svg" class="rounded-full w-16 h-16" alt="Degokes Avatar Image" />
           <h1 class="text-3xl md:text-4xl font-semibold">Adegoke Adewoye
           </h1>
           
