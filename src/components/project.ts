@@ -12,7 +12,7 @@ export function Project(project: ProjectType): string {
   return html`
     <div
       data-type=${project.type}
-      class="drop-shadow-lg px-6 py-4 bg-light space-y-12 hover:drop-shadow-2xl project-card transition-all duration-500"
+      class="drop-shadow-lg px-6 py-4 bg-light space-y-12 hover:drop-shadow-2xl project-card md:ransition-all duration-500"
     >
       ${project.type === "blogpost"
         ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">

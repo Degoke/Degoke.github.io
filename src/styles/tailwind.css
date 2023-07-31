@@ -10,7 +10,7 @@
     a:hover {
         cursor: pointer;
         transform: scale(1.1);
-        @apply transition-all duration-500
+        @apply md:transition-all duration-500
     }
 }
 

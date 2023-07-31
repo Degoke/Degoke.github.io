@@ -124,7 +124,7 @@ function Main(): string {
         </ul>
           
           <p class="text-sm md:text-base font-normal opacity-70">
-          My experience as a <span class="font-semibold">Fullstack Engineer</span>, <span class="font-semibold">Cloud Devops Engineer</span> and <span class="font-semibold">Blockchain Engineer</span> with my expertise in <span class="font-semibold">TypeScript</span>, <span class="font-semibold">Golang</span> and <span class="font-semibold">Python</span> forms my foundation for bringing software products to life across diverse industries.
+          My experience as a <span class="font-semibold">Lead Software Engineer</span>, <span class="font-semibold">Fullstack Engineer</span>, <span class="font-semibold">Cloud Devops Engineer</span> and <span class="font-semibold">Blockchain Engineer</span> coupled with my expertise in <span class="font-semibold">TypeScript</span>, <span class="font-semibold">Golang</span> and <span class="font-semibold">Python</span> form my foundation for bringing software products to life across diverse industries.
           </p>
           <p class="text-sm md:text-base font-normal opacity-70">
           I excel in designing robust architectures, implementing cutting-edge features, and optimizing performance to deliver high-quality and scalable solutions while collaborating with cross-functional teams, mentoring fellow developers, and driving projects to successful completion.
@@ -133,14 +133,14 @@ function Main(): string {
         
       </section>
       <div id="project-nav" class="gap-16 py-8 px-2 flex  justify-center flex-wrap mt-8 sticky z-40 top-0 bg-dark">
-        <a href="#projects" name="projects" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 transition-all duration-500" ${
+        <a href="#projects" name="projects" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 md:transition-all duration-500" ${
           (tab === "#projects" || !tab) && "data-active='true'"
         }">
           <span>01</span>
           <hr class="w-2/6 group-hover:w-full group-data-[active=true]:w-full" /> 
           <span>Projects</span>
           </a>
-          <a href="#blogposts" name="blogposts" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 transition-all duration-500" ${
+          <a href="#blogposts" name="blogposts" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 md:transition-all duration-500" ${
             tab === "#blogposts" && "data-active='true'"
           }">
           <span>02</span> 
