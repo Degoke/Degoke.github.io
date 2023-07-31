@@ -19,3 +19,5 @@ export const blogNavButton: HTMLElement = document.querySelector(
 export const projectNavButton: HTMLElement = document.querySelector(
   ".nav-button[name='projects']",
 )!;
+
+export const projectNav: HTMLElement = document.getElementById("project-nav")!;

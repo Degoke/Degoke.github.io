@@ -1,8 +1,8 @@
 import {
   blogNavButton,
   blogPosts,
-  mainContent,
   navButtons,
+  projectNav,
   projectNavButton,
   projects,
 } from "../library/elements";
@@ -73,7 +73,22 @@ let callback = (entries: IntersectionObserverEntry[]) => {
 
 let observer = new IntersectionObserver(callback, options);
 
-mainContent.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   projects.forEach((project) => observer.observe(project));
   blogPosts.forEach((post) => observer.observe(post));
+});
+
+document.addEventListener("scroll", () => {
+  const rect = projectNav.getBoundingClientRect();
+  if (rect.top === 0) {
+    if (projectNav.classList.contains("added")) {
+      return;
+    }
+
+    projectNav.classList.add("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]");
+    projectNav.classList.add("added");
+  } else {
+    projectNav.classList.remove("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]");
+    projectNav.classList.remove("added");
+  }
 });
