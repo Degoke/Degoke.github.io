@@ -1,15 +1,15 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const r of s.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&n(r)}).observe(document,{childList:!0,subtree:!0});function o(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(a){if(a.ep)return;a.ep=!0;const s=o(a);fetch(a.href,s)}})();function i(t,...e){return String.raw({raw:t},...e)}function c(){return new URL(window.location.href).hash}function d(t){const e=new URL(window.location.href);e.hash="#"+t,history.replaceState(null,"null",e)}function g(t){const e=[],o=[];return t.forEach((n,a)=>{a%2===0?e.push(n):o.push(n)}),{evenIndexes:e,oddIndexes:o}}function p(t){return i`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const r of s.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&n(r)}).observe(document,{childList:!0,subtree:!0});function o(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(a){if(a.ep)return;a.ep=!0;const s=o(a);fetch(a.href,s)}})();function i(e,...t){return String.raw({raw:e},...t)}function c(){return new URL(window.location.href).hash}function d(e){const t=new URL(window.location.href);t.hash="#"+e,history.replaceState(null,"null",t)}function g(e){const t=[],o=[];return e.forEach((n,a)=>{a%2===0?t.push(n):o.push(n)}),{evenIndexes:t,oddIndexes:o}}function p(e){return i`
     <div
-      data-type=${t.type}
-      class="drop-shadow-lg px-6 py-4 bg-light space-y-12 hover:drop-shadow-2xl project-card transition-all duration-500"
+      data-type=${e.type}
+      class="drop-shadow-lg px-6 py-4 bg-light space-y-12 hover:drop-shadow-2xl project-card md:ransition-all duration-500"
     >
-      ${t.type==="blogpost"?`<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      ${e.type==="blogpost"?`<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
         <path d="M7 8h10" />
         <path d="M7 12h10" />
         <path d="M7 16h10" />
-      </svg>`:t.type==="project"?`<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      </svg>`:e.type==="project"?`<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M7 8l-4 4l4 4" />
         <path d="M17 8l4 4l-4 4" />
@@ -17,16 +17,16 @@
       </svg>`:""}
 
       <div class="">
-        <h2 class="text-lg md:text-xl font-semibold">${t.title}</h2>
-        <p class="opacity-70 text-base md:text-lg mt-4">${t.details}</p>
+        <h2 class="text-lg md:text-xl font-semibold">${e.title}</h2>
+        <p class="opacity-70 text-base md:text-lg mt-4">${e.details}</p>
         <p class="font-semibold opacity-70 text-sm mt-8">
-          ${t.tags.reduce((e,o)=>e+o+".","#")}
+          ${e.tags.reduce((t,o)=>t+o+".","#")}
         </p>
       </div>
       <ul class="flex items-center gap-4">
         <li>
           <a
-            href=${t.link}
+            href=${e.link}
             target="__blank"
             class="flex gap-1 items-center"
           >
@@ -59,22 +59,22 @@
       id="blogposts"
       class="lg:w-8/12 m-auto grid grid-cols-1 gap-2 pt-32 project-container"
     >
-      ${u.reduce((t,e)=>t+p(e),"")}
+      ${u.reduce((e,t)=>e+p(t),"")}
     </div>
   `}const v=[{title:"Dekube Core",details:"A paas for deploying applications to kubernetes, acts as the core for Dekube application. <br>Built with golang, gin and kubernetes-client-go. ",link:"https://github.com/Degoke/dekube-core",tags:["golang","kubernetes","devops"],type:"project"},{title:"Doc Verify",details:"Document analysis and image comparison application for identity verification <br> Built with golang, gin, aws-sdk-go, gorm, mongodb",link:"https://github.com/Degoke/doc-verify",tags:["golang","aws","ml","backend"],type:"project"},{title:"ETH Service",details:"A service for managing Accounts and Transactions on Ethereum. <br> Built with NestJS, web3.js, MongoDB for data persistence and Ganache for a local node.",link:"https://github.com/Degoke/eth_service",tags:["typescript","nestjs","backend","blockchain"],type:"project"},{title:"Gitlab Slack App",details:"A slack app for receiving gitlab notifications, tagging the users that need to be aware of the notifications and sending them private direct messages",link:"https://github.com/Degoke/gitlab-slack-app",tags:["javascript","nodejs","express","backend"],type:"project"},{title:"Account Management API",details:"An account management application, for sending and receiving money.<br> Built with Nest js and MongoDB",link:"https://github.com/Degoke/account-management-api",tags:["typescript","nestjs","mongodb","backend"],type:"project"},{title:"Account Management UI",details:"The ui of the account management application.<br>Built with React and Material UI",link:"https://github.com/Degoke/account-management-ui-service",tags:["typescript","react","materialui","frontend"],type:"project"},{title:"My Portfolio Site",details:`Minimalist dark mode portfolio website to show my works<br>
-      Built with Vanilla Typescript, Tailwind Css and Vite`,link:"https://github.com/Degoke/portfolio",tags:["typescript","html","tailwind","frontend"],type:"project"},{title:"Udapeople Autodeploy",details:"Setting up CI/CD for udapeople app, using Circle CI, AWS Cloud Formation, Ansible",link:"https://github.com/Degoke/udapeople-autodeploy",tags:["aws","ansible","ci-cd","devops"],type:"project"}];function w(){const{evenIndexes:t,oddIndexes:e}=g(v);return i`
+      Built with Vanilla Typescript, Tailwind Css and Vite`,link:"https://github.com/Degoke/portfolio",tags:["typescript","html","tailwind","frontend"],type:"project"},{title:"Udapeople Autodeploy",details:"Setting up CI/CD for udapeople app, using Circle CI, AWS Cloud Formation, Ansible",link:"https://github.com/Degoke/udapeople-autodeploy",tags:["aws","ansible","ci-cd","devops"],type:"project"}];function m(){const{evenIndexes:e,oddIndexes:t}=g(v);return i`
     <div
       id="projects"
       class="lg:w-8/12 pt-32 m-auto grid grid-cols-1 lg:grid-cols-2 gap-2 project-container"
     >
       <div class="grid grid-cols-1 gap-2 content-start">
-        ${t.reduce((o,n)=>o+p(n),"")}
-      </div>
-      <div class="grid grid-cols-1 gap-2 content-start lg:mt-8">
         ${e.reduce((o,n)=>o+p(n),"")}
       </div>
+      <div class="grid grid-cols-1 gap-2 content-start lg:mt-8">
+        ${t.reduce((o,n)=>o+p(n),"")}
+      </div>
     </div>
-  `}function m(){const t=c();return i`
+  `}function w(){const e=c();return i`
     <main class="px-8 py-12">
       <section class="lg:w-8/12 m-auto py-4 lg:py-8 lg:mt-16">
         <div class="space-y-12">
@@ -193,7 +193,7 @@
         </ul>
           
           <p class="text-sm md:text-base font-normal opacity-70">
-          My experience as a <span class="font-semibold">Fullstack Engineer</span>, <span class="font-semibold">Cloud Devops Engineer</span> and <span class="font-semibold">Blockchain Engineer</span> with my expertise in <span class="font-semibold">TypeScript</span>, <span class="font-semibold">Golang</span> and <span class="font-semibold">Python</span> forms my foundation for bringing software products to life across diverse industries.
+          My experience as a <span class="font-semibold">Lead Software Engineer</span>, <span class="font-semibold">Fullstack Engineer</span>, <span class="font-semibold">Cloud Devops Engineer</span> and <span class="font-semibold">Blockchain Engineer</span> coupled with my expertise in <span class="font-semibold">TypeScript</span>, <span class="font-semibold">Golang</span> and <span class="font-semibold">Python</span> form my foundation for bringing software products to life across diverse industries.
           </p>
           <p class="text-sm md:text-base font-normal opacity-70">
           I excel in designing robust architectures, implementing cutting-edge features, and optimizing performance to deliver high-quality and scalable solutions while collaborating with cross-functional teams, mentoring fellow developers, and driving projects to successful completion.
@@ -202,19 +202,19 @@
         
       </section>
       <div id="project-nav" class="gap-16 py-8 px-2 flex  justify-center flex-wrap mt-8 sticky z-40 top-0 bg-dark">
-        <a href="#projects" name="projects" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 transition-all duration-500" ${(t==="#projects"||!t)&&"data-active='true'"}">
+        <a href="#projects" name="projects" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 md:transition-all duration-500" ${(e==="#projects"||!e)&&"data-active='true'"}">
           <span>01</span>
           <hr class="w-2/6 group-hover:w-full group-data-[active=true]:w-full" /> 
           <span>Projects</span>
           </a>
-          <a href="#blogposts" name="blogposts" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 transition-all duration-500" ${t==="#blogposts"&&"data-active='true'"}">
+          <a href="#blogposts" name="blogposts" class="nav-button group text-base md:text-lg opacity-70 hover:opacity-100 hover:scale-125 hover:cursor-pointer data-[active=true]:opacity-100 data-[active=true]:scale-125 md:transition-all duration-500" ${e==="#blogposts"&&"data-active='true'"}">
           <span>02</span> 
           <hr class="w-2/6 group-hover:w-full group-data-[active=true]:w-full" /> 
           <span>Blog Posts</span>
           </a>
         </div>
       <section id="main-content" class="main-content py-2 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] overflow-y-hidden overflow-x-visible">
-      ${w()}
+      ${m()}
       ${f()}
       </section>
       <ul class="flex gap-x-6 gap-y-4 lg:gap-6 flex-wrap place-content-center mt-8">
@@ -319,4 +319,4 @@
       </li>
     </ul>
     </main>
-  `}document.querySelector("#app").innerHTML=m();const b=document.querySelectorAll(".nav-button"),k=document.querySelectorAll("div[data-type='project']"),y=document.querySelectorAll("div[data-type='blogpost']");document.getElementById("main-content");const x=document.querySelector(".nav-button[name='blogposts']"),M=document.querySelector(".nav-button[name='projects']"),l=document.getElementById("project-nav");b.forEach(t=>{t.addEventListener("click",()=>{j(t)})});function j(t){const e=t.getAttribute("data-active"),o=t.getAttribute("name");e||(document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),t.setAttribute("data-active","true"),d(o))}let A={root:null,rootMargin:"0px",threshold:1},B=t=>{t.forEach(e=>{if(e.isIntersecting){if(e.target.getAttribute("data-type")==="project"){if(c()=="#projects")return;document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),M.setAttribute("data-active","true"),d("projects")}if(e.target.getAttribute("data-type")==="blogpost"){if(c()=="#blogposts")return;document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),x.setAttribute("data-active","true"),d("blogposts")}}})},h=new IntersectionObserver(B,A);document.addEventListener("scroll",()=>{k.forEach(t=>h.observe(t)),y.forEach(t=>h.observe(t))});document.addEventListener("scroll",()=>{if(l.getBoundingClientRect().top===0){if(l.classList.contains("added"))return;l.classList.add("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"),l.classList.add("added")}else l.classList.remove("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"),l.classList.remove("added")});
+  `}document.querySelector("#app").innerHTML=w();const b=document.querySelectorAll(".nav-button"),k=document.querySelectorAll("div[data-type='project']"),y=document.querySelectorAll("div[data-type='blogpost']");document.getElementById("main-content");const x=document.querySelector(".nav-button[name='blogposts']"),M=document.querySelector(".nav-button[name='projects']"),l=document.getElementById("project-nav");b.forEach(e=>{e.addEventListener("click",()=>{j(e)})});function j(e){const t=e.getAttribute("data-active"),o=e.getAttribute("name");t||(document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),e.setAttribute("data-active","true"),d(o))}let A={root:null,rootMargin:"0px",threshold:1},B=e=>{e.forEach(t=>{if(t.isIntersecting){if(t.target.getAttribute("data-type")==="project"){if(c()=="#projects")return;document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),M.setAttribute("data-active","true"),d("projects")}if(t.target.getAttribute("data-type")==="blogpost"){if(c()=="#blogposts")return;document.querySelectorAll(".nav-button[data-active=true").forEach(a=>{a.toggleAttribute("data-active")}),x.setAttribute("data-active","true"),d("blogposts")}}})},h=new IntersectionObserver(B,A);document.addEventListener("scroll",()=>{k.forEach(e=>h.observe(e)),y.forEach(e=>h.observe(e))});document.addEventListener("scroll",()=>{if(l.getBoundingClientRect().top===0){if(l.classList.contains("added"))return;l.classList.add("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"),l.classList.add("added")}else l.classList.remove("shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"),l.classList.remove("added")});
